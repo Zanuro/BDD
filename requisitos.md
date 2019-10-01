@@ -1,4 +1,4 @@
-# Reunión inicial
+<center> <h1> Reunión inicial </h1></center>
 
 **Contratante**: Juan Manuel Rodríguez Poo
 

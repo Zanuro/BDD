@@ -1,7 +1,7 @@
 # Administracion y Diseño de Bases de Datos
 
 
-En este repositorio se subiran todas las practicas que se realizaran a lo largo del curos.
+En este repositorio se subiran todas las practicas que se realizaran a lo largo del curso.
 
 ## Presentación Supuesto Proyecto de Bases de Datos
 

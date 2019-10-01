@@ -1,6 +1,7 @@
 # Reunión inicial
 
 **Contratante**: Juan Manuel Rodríguez Poo
+
 **Objetivo**: Crear una base de datos para realizar el censo poblacional.
 
 Este es el resumen de la reunión con el responsable del ente contratante para la creación de la Base de Datos para el censo poblacional de los municipios españoles. De dicha reunión y de las impresiones captadas se procede a sacar las conclusiones de los elementos necesarios para la implementación de dicho encargo.

@@ -1,0 +1,46 @@
+usuario@ubuntu:~$> sudo apt-get install postgresql
+usuario@ubuntu:~$> sudo su postgres
+postgres@ubuntu:~$> createuser usuario
+postgres@ubuntu:~$> psql
+postgres=# alter role usuario with password 'XXXXXXXX';
+postgres=# ALTER USER usuario WITH SUPERUSER;
+postgres=# \q
+postgres@ubuntu:~$> exit
+usuario@ubuntu:~$> psql -d template1
+template1=# CREATE DATABASE pract1;
+template1=# \c pract1;
+pract1=# create table usuarios (
+		nombre varchar(30),
+		clave varchar(10)
+		);
+pract1=# INSERT INTO usuarios (nombre, clave) values ('lsa','asdf');
+pract1=# INSERT INTO usuarios (nombre, clave) values ('Pablo','jfx344');
+pract1=# INSERT INTO usuarios (nombre, clave) values ('Ana','tru3fal');
+pract1=# SELECT * FROM usuarios;
+ nombre |  clave  
+--------+---------
+ lsa    | asdf
+ Pablo  | jfx344
+ Ana    | tru3fal
+(3 rows)
+
+pract1=# \l
+                                  List of databases
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+-----------+----------+----------+-------------+-------------+-----------------------
+ postgres  | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | 
+ pract1    | usuario  | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | 
+ template0 | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+ template1 | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | =c/postgres          +
+           |          |          |             |             | postgres=CTc/postgres
+(4 rows)
+
+pract1=# \dt
+          List of relations
+ Schema |   Name   | Type  |  Owner  
+--------+----------+-------+---------
+ public | usuarios | table | usuario
+(1 row)
+
+pract1=# \q

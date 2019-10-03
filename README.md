@@ -7,5 +7,8 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 [Practica 1-Supesto Proyecto de Bases de Datos](https://github.com/Zanuro/BDD/blob/master/requisitos.md)
 
+## Instalación y prueba de postgresql
+
+[Practica 2-Instalación y prueba de postgresql](https://github.com/Zanuro/BDD/blob/master/Practica%20Instalación%20y%20prueba%20de%20postgresql.txt)
 
 ## Requisitos que debe cumplir esta Base de Datos

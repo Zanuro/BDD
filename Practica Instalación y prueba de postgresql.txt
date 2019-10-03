@@ -17,7 +17,7 @@ pract1=# INSERT INTO usuarios (nombre, clave) values ('lsa','asdf');
 pract1=# INSERT INTO usuarios (nombre, clave) values ('Pablo','jfx344');
 pract1=# INSERT INTO usuarios (nombre, clave) values ('Ana','tru3fal');
 pract1=# SELECT * FROM usuarios;
- nombre |  clave  
+ nombre |  clave
 --------+---------
  lsa    | asdf
  Pablo  | jfx344
@@ -26,10 +26,10 @@ pract1=# SELECT * FROM usuarios;
 
 pract1=# \l
                                   List of databases
-   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
+   Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges
 -----------+----------+----------+-------------+-------------+-----------------------
- postgres  | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | 
- pract1    | usuario  | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | 
+ postgres  | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 |
+ pract1    | usuario  | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 |
  template0 | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | =c/postgres          +
            |          |          |             |             | postgres=CTc/postgres
  template1 | postgres | UTF8     | es_ES.UTF-8 | es_ES.UTF-8 | =c/postgres          +
@@ -38,7 +38,7 @@ pract1=# \l
 
 pract1=# \dt
           List of relations
- Schema |   Name   | Type  |  Owner  
+ Schema |   Name   | Type  |  Owner
 --------+----------+-------+---------
  public | usuarios | table | usuario
 (1 row)

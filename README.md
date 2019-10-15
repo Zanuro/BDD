@@ -12,3 +12,10 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 [Practica 2-Instalación y prueba de postgresql](https://github.com/Zanuro/BDD/blob/master/Practica%20Instalación%20y%20prueba%20de%20postgresql.txt)
 
 ## Requisitos que debe cumplir esta Base de Datos
+
+## Modelo Conceptual
+
+# Analisis de los requisitos de la BDD de la empresa de alquileres
+
+# Analisis de los requisitos de la BDD del Servicio de Deportes de la ULL
+

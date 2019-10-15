@@ -15,7 +15,8 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 ## Modelo Conceptual
 
-# Analisis de los requisitos de la BDD de la empresa de alquileres
+[Analisis de los requisitos de la BDD de la empresa de alquileres](https://github.com/Zanuro/BDD/blob/master/Alquiler_Inmuebles.png)
 
-# Analisis de los requisitos de la BDD del Servicio de Deportes de la ULL
+
+[Analisis de los requisitos de la BDD del Servicio de Deportes de la ULL](https://github.com/Zanuro/BDD/blob/master/Copia-de-Deportes.png)
 

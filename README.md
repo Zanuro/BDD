@@ -13,7 +13,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 ## Requisitos que debe cumplir esta Base de Datos
 
-## Modelo Conceptual
+## Practica 3-Modelo Conceptual
 
 [Analisis de los requisitos de la BDD de la empresa de alquileres](https://github.com/Zanuro/BDD/blob/master/Alquiler_Inmuebles.png)
 

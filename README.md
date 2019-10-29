@@ -22,3 +22,6 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 ## Practica 4-Diseño Viveros
 [Modelo E/R de la base de datos de la empresa de viveros.](https://github.com/Zanuro/BDD/blob/master/viveros.png)
+
+## Practica 5-Club de Baile
+[Modelo E/R de la base de datos del Club De Baile.]()

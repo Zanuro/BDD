@@ -30,6 +30,8 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 [Diagrama del Modelo E/R de la base de datos de Viveros.(formato especifico para el workbench de SQL](https://github.com/Zanuro/BDD/blob/master/eer_viveros_ruyman.mwb)
 
 [Script que permite la creacion e insercion de los datos en la Base De Datos](https://github.com/Zanuro/BDD/blob/master/viveros.sql)
+
+[Imagen del Diagrama EER de la base de datos de Viveros.]()
 ###### Para cargar los datos es necesario crear la base de datos dentro de postgre:
 ###### CREATE DATABASE Viveros;
 ###### Conectarnos a esa Base De Datos: \c Viveros;

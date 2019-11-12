@@ -41,9 +41,9 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 [Script base de datos Viveros](https://github.com/Zanuro/BDD/blob/master/Viveros/viveros-trigger-vlad_mod_debug.sql)
 
-[Script base de datos Farmacia]()
+[Script base de datos Farmacia](https://github.com/Zanuro/BDD/blob/master/Farmacia/farmacia_datos_y_trigger.sql)
 
 [Imagen del funcionamiento del trigger modify_stock() en Viveros](https://github.com/Zanuro/BDD/blob/master/Viveros/viveros_trigger_vlad.jpg)
 
-[Imagen del funcionamiento del trigger actualizar_compra() en Farmacia]()
+[Imagen del funcionamiento del trigger actualizar_compra() en Farmacia](https://github.com/Zanuro/BDD/blob/master/Farmacia/farmacia_trigger.jpg)
 

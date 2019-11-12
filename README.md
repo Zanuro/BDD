@@ -37,9 +37,10 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 ###### Conectarnos a esa Base De Datos: \c Viveros;
 ###### Cargar el script 'viveros.sql': \i 'path/viveros.sql';
 
-##Practica8-Triggers base de datos Viveros y Farmacia.
-[Script base de datos Viveros]()
+## Practica8-Triggers base de datos Viveros y Farmacia.
+
+[Script base de datos Viveros](https://github.com/Zanuro/BDD/blob/master/Viveros/viveros-trigger-vlad_mod_debug.sql)
 [Script base de datos Farmacia]()
-[Imagen del funcionamiento del trigger modify_stock() en Viveros]()
+[Imagen del funcionamiento del trigger modify_stock() en Viveros](https://github.com/Zanuro/BDD/blob/master/Viveros/viveros_trigger_vlad.jpg)
 [Imagen del funcionamiento del trigger actualizar_compra() en Farmacia]()
 

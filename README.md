@@ -47,3 +47,11 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 [Imagen del funcionamiento del trigger actualizar_compra() en Farmacia](https://github.com/Zanuro/BDD/blob/master/Farmacia/farmacia_trigger.jpg)
 
+
+## Practica9 - Proyectos Arquitectónicos
+
+[Script base de datos Proyectos Arquitectónicos (PostgreSQL)](https://github.com/Zanuro/BDD/blob/master/ProyectoArquitectonico/proyectos.sql)
+
+[Script en SQL2003 (sin datos ni triggers)](https://github.com/Zanuro/BDD/blob/master/ProyectoArquitectonico/proyectos_sql_2003.sql)
+
+[Imagen del modelo de clases UML de la BD Proyectos Arquitectónicos](https://github.com/Zanuro/BDD/blob/master/ProyectoArquitectonico/esquema.png)

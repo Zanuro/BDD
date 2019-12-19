@@ -57,6 +57,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 [Imagen del modelo de clases UML de la BD Proyectos Arquitectónicos](https://github.com/Zanuro/BDD/blob/master/ProyectoArquitectonico/esquema.png)
 
 ## Modelo E/R - Proyecto OAN(Video-streaming)
-[ELABORACIÓN DEL MODELO CONCEPTUAL DE DATOS (ASI-6.1)-Modelo E/R Extendido]()
-[Diagrama drawio E/R OAN]()
+[ELABORACIÓN DEL MODELO CONCEPTUAL DE DATOS (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/E_R.pdf)
+
+[Diagrama drawio E/R OAN](https://github.com/Zanuro/BDD/blob/master/E-R-OAN.png)
 

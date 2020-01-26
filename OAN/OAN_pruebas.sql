@@ -250,3 +250,88 @@ ROLLBACK;
 \echo '============================================================================================' 
 \echo
 \echo
+
+
+--
+-- PERFIL_VISUALIZA_TITULO: Si el momento actual coincide aproximadamente con la duración del título, se marca como visto.
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '---------------------------------------------------------------------------' 
+\echo ' PERFIL_VISUALIZA_TITULO: Si el momento actual coincide aproximadamente con'
+\echo '                          la duración del título, se marca como visto.     '
+\echo '---------------------------------------------------------------------------' 
+\echo 
+\echo '-- Insertamos visualizacion de 1000 segundos de perfil 1 en titulo 3:'
+\echo '   ------------------------------------------------------------------'
+INSERT INTO perfil_visualiza_titulo (idPerfil, idTitulo, momento_actual)
+VALUES (1, 3, 1000);
+\echo
+\echo 'RESULTADO:  Debe aparecer como visto = false'
+\echo
+SELECT * FROM perfil_visualiza_titulo WHERE idPerfil=1 AND idTitulo=3;
+
+\echo
+\echo
+
+\echo '-- Ahora, actualizamos el momento actual a 2650 seg. :'
+\echo '   ---------------------------------------------------'
+
+UPDATE perfil_visualiza_titulo SET momento_actual = 2650 WHERE idPerfil=1 AND idTitulo=3;
+\echo
+\echo 'RESULTADO:  Debe aparecer como visto = true'
+\echo
+SELECT * FROM perfil_visualiza_titulo WHERE idPerfil=1 AND idTitulo=3;
+
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+
+--
+-- PERFIL_VISUALIZA_TITULO: Si se marca un título como visto y el usuario lo
+--                          tiene en descargas, se elimina.
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '-----------------------------------------------------------------------------' 
+\echo ' -- PERFIL_VISUALIZA_TITULO: Si se marca un título como visto y el usuario lo'
+\echo '--                          tiene en descargas, se elimina.'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo 'INFO: el perfil 1 tiene descargada el titulo 3, pero no lo ha visto.'
+\echo
+SELECT * FROM descargas WHERE idPerfil=1 AND idTitulo=3;
+\echo
+\echo '-- Insertamos visualizacion de 2650 segundos de perfil 1 en titulo 3:'
+\echo '   ------------------------------------------------------------------'
+INSERT INTO perfil_visualiza_titulo (idPerfil, idTitulo, momento_actual)
+VALUES (1, 3, 2650);
+\echo
+\echo 'RESULTADO:  Debe aparecer como visto = true'
+\echo
+SELECT * FROM perfil_visualiza_titulo WHERE idPerfil=1 AND idTitulo=3;
+\echo
+\echo 'RESULTADO:  No debe existir en la tabla descargas'
+\echo
+SELECT * FROM descargas WHERE idPerfil=1 AND idTitulo=3;
+
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+

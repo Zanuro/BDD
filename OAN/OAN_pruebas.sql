@@ -335,3 +335,123 @@ ROLLBACK;
 \echo
 
 
+--
+-- 	SUSCRIPCION: Impedir que un usuario tenga más de 1 suscripción activa en el momento actual.
+--     
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo 
+\echo '-----------------------------------------------------------------------------' 
+\echo ' -- SUSCRIPCION:Impedir que un usuario tenga más de 1 suscripción activa en el momento actual. '
+\echo '--'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo 'INFO: el usuario antonio.gutierrez1984 tiene una solo suscripcion activa.'
+\echo 
+SELECT * FROM suscripcion WHERE email='antonio.gutierrez1984@gmail.com' and fecha_finalizacion >= CURRENT_DATE;
+\echo
+\echo '--Le anadimos al usuario antonio.gutierrez1984 otra suscripcion:'
+\echo '------------------------------------------------------------------'
+INSERT INTO suscripcion (idsuscripcion, fecha_finalizacion, num_descargas_max, tipo_suscripcion, email)
+VALUES (5, '2020-05-10', 1, 'Basica', 'antonio.gutierrez1984@gmail.com');
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo
+\echo
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+--
+--      TITULO:Impedir la modificación del tipo de un título, si anteriormente era serie y aún sigue asociada a una serie.
+--     
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo 
+\echo '-----------------------------------------------------------------------------' 
+\echo ' -- TITULO:Impedir la modificación del tipo de un título, si anteriormente era serie y aún sigue asociada a una serie'
+\echo '--'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo 'INFO: El titulo Historia de dos ciudades es una serie.'
+\echo 
+SELECT * FROM titulo WHERE nombre='Historia de dos ciudades' and tipo='Serie';
+\echo
+\echo '--Modificamos el tipo del titulo de Serie a Documental'
+\echo '------------------------------------------------------------------'
+UPDATE titulo SET tipo='Documental' WHERE nombre='Historia de dos ciudades' and tipo='Serie';
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo
+\echo
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+--
+--     TITULO_SERIE:Comprobar que el título que se desea asociar a una serie es del tipo serie.
+--     
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo 
+\echo '-----------------------------------------------------------------------------' 
+\echo ' -- TITULO_SERIE:Comprobar que el título que se desea asociar a una serie es del tipo serie'
+\echo '--'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo 'INFO: El titulo Bad Boys for Life es del tipo Pelicula.'
+\echo 
+SELECT * FROM titulo WHERE nombre='Bad Boys for Life' and tipo='Pelicula';
+\echo
+\echo '--Introducimos la Pelicula en la tabla TITULO_SERIE'
+\echo '------------------------------------------------------------------'
+INSERT INTO titulo_serie (idtitulo, capitulo, temporada, idserie)
+VALUES (1, 1, 2, 2);
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+\echo
+\echo
+
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo 'INFO: El titulo Historia de dos ciudades es del tipo Serie y se encuentra en la tabla titulo_serie.'
+\echo 
+SELECT * FROM titulo_serie WHERE idtitulo=3;
+\echo
+\echo '--Cambiamos a otro titulo'
+\echo '------------------------------------------------------------------'
+UPDATE titulo_serie SET idtitulo=1 WHERE idserie=1 and idtitulo=3;
+
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+\echo
+\echo
+
+
+\echo '============================================================================================' 
+\echo
+\echo
+

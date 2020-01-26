@@ -58,6 +58,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 ## Proyecto OAN(Video-streaming)
 
+[Proyecto Bases de Datos]()
 [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Seminario1_Proyecto.docx)
 
 [Modelo Conceptual ER](https://github.com/Zanuro/BDD/blob/master/OAN/E-R-OAN.png)
@@ -75,6 +76,4 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 [Pruebas sobre el funcionamiento de la base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_pruebas.sql)
 
 [ELABORACIÓN DEL MODELO CONCEPTUAL DE DATOS (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/E_R.pdf)
-
-[Diagrama drawio E/R OAN](https://github.com/Zanuro/BDD/blob/master/E-R-OAN.png)
 

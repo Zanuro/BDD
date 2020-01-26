@@ -58,7 +58,8 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 ## Proyecto OAN(Video-streaming)
 
-[Proyecto Bases de Datos]()
+[Proyecto Bases de Datos](https://github.com/Zanuro/BDD/blob/master/OAN/Proyecto%20de%20dise%C3%B1o%20de%20una.docx)
+
 [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Seminario1_Proyecto.docx)
 
 [Modelo Conceptual ER](https://github.com/Zanuro/BDD/blob/master/OAN/E-R-OAN.png)

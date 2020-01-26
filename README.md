@@ -56,22 +56,23 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 [Imagen del modelo de clases UML de la BD Proyectos Arquitectónicos](https://github.com/Zanuro/BDD/blob/master/ProyectoArquitectonico/esquema.png)
 
-## Modelo E/R - Proyecto OAN(Video-streaming)
+## Proyecto OAN(Video-streaming)
+
 [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Seminario1_Proyecto.docx)
 
-[Modelo Conceptual ER]()
+[Modelo Conceptual ER](https://github.com/Zanuro/BDD/blob/master/OAN/E-R-OAN.png)
 
-[Modelo Logico-Relacional]()
+[Modelo Logico-Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_logico_relacional.png)
 
 [Modelo Logico Objeto-Relacional UML]()
 
-[Script generado a partir del modelo Logico-Relacional+Triggers]()
+[Script generado a partir del modelo Logico-Relacional+Triggers](https://github.com/Zanuro/BDD/blob/master/OAN/OAN.sql)
 
 [Script generado a partir del modelo logico objeto-relacional]()
 
-[Carga de datos]()
+[Carga de datos](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_datos.sql)
 
-[Pruebas sobre el funcionamiento de la base de datos]()
+[Pruebas sobre el funcionamiento de la base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_pruebas.sql)
 
 [ELABORACIÓN DEL MODELO CONCEPTUAL DE DATOS (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/E_R.pdf)
 

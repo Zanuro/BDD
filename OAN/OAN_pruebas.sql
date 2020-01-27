@@ -4,6 +4,12 @@ CARGADO EL SCRIPT OAN_DATOS.SQL Y NO HABER
 MODIFICADO NINGUN DATO.
 */
 
+\echo '**************************************************************'
+\echo '**   PRUEBAS DE FUNCIONAMIENTO DE LOS TRIGGERS              **'
+\echo '**************************************************************'
+\echo
+\echo
+
 --
 -- Impedir que se supere el número máximo de descargas de un usuario
 --
@@ -187,6 +193,11 @@ START TRANSACTION;
 INSERT INTO perfil_comenta_titulo (idPerfil, idTitulo, fecha, comentario)
 VALUES (1, 1, CURRENT_TIMESTAMP, 'Ya la he visto 12 veces, la sigo recomendando');
 
+\echo
+\echo 'RESULTADO:'
+\echo
+SELECT * FROM perfil_comenta_titulo WHERE idPerfil=1 AND idTitulo=1;
+
 \o /dev/null
 ROLLBACK;
 \o
@@ -242,6 +253,11 @@ START TRANSACTION;
 \echo '-- Insertamos el perfil 1 como amigo del perfil 4 (debe realizarse sin problemas):'
 \echo '   -------------------------------------------------------------------------------'
 INSERT INTO perfil_perfil (idPerfil, idPerfilAmigo) VALUES (1, 4);
+
+\echo
+\echo 'RESULTADO:'
+\echo
+SELECT * FROM perfil_perfil WHERE idPerfil=1 AND idPerfilAmigo=4;
 
 \o /dev/null
 ROLLBACK;
@@ -305,8 +321,8 @@ START TRANSACTION;
 
 \echo
 \echo '-----------------------------------------------------------------------------' 
-\echo ' -- PERFIL_VISUALIZA_TITULO: Si se marca un título como visto y el usuario lo'
-\echo '--                          tiene en descargas, se elimina.'
+\echo ' PERFIL_VISUALIZA_TITULO: Si se marca un título como visto y el usuario lo'
+\echo '                          tiene en descargas, se elimina.'
 \echo '-----------------------------------------------------------------------------' 
 \echo 
 \echo 'INFO: el perfil 1 tiene descargada el titulo 3, pero no lo ha visto.'
@@ -335,6 +351,7 @@ ROLLBACK;
 \echo
 
 
+
 --
 -- 	SUSCRIPCION: Impedir que un usuario tenga más de 1 suscripción activa en el momento actual.
 --     
@@ -345,15 +362,15 @@ START TRANSACTION;
 
 \echo 
 \echo '-----------------------------------------------------------------------------' 
-\echo ' -- SUSCRIPCION:Impedir que un usuario tenga más de 1 suscripción activa en el momento actual. '
-\echo '--'
+\echo '  SUSCRIPCION: Impedir que un usuario tenga más de 1 suscripción activa en el'
+\echo '               momento actual. '
 \echo '-----------------------------------------------------------------------------' 
 \echo 
 \echo 'INFO: el usuario antonio.gutierrez1984 tiene una solo suscripcion activa.'
 \echo 
 SELECT * FROM suscripcion WHERE email='antonio.gutierrez1984@gmail.com' and fecha_finalizacion >= CURRENT_DATE;
 \echo
-\echo '--Le anadimos al usuario antonio.gutierrez1984 otra suscripcion:'
+\echo '-- Le anadimos al usuario antonio.gutierrez1984 otra suscripcion:'
 \echo '------------------------------------------------------------------'
 INSERT INTO suscripcion (idsuscripcion, fecha_finalizacion, num_descargas_max, tipo_suscripcion, email)
 VALUES (5, '2020-05-10', 1, 'Basica', 'antonio.gutierrez1984@gmail.com');
@@ -379,16 +396,16 @@ START TRANSACTION;
 
 \echo 
 \echo '-----------------------------------------------------------------------------' 
-\echo ' -- TITULO:Impedir la modificación del tipo de un título, si anteriormente era serie y aún sigue asociada a una serie'
-\echo '--'
+\echo ' -- TITULO: Impedir la modificación del tipo de un título, si anteriormente'
+\echo '            era serie y aún sigue asociada a una serie'
 \echo '-----------------------------------------------------------------------------' 
 \echo 
 \echo 'INFO: El titulo Historia de dos ciudades es una serie.'
 \echo 
 SELECT * FROM titulo WHERE nombre='Historia de dos ciudades' and tipo='Serie';
 \echo
-\echo '--Modificamos el tipo del titulo de Serie a Documental'
-\echo '------------------------------------------------------------------'
+\echo '-- Modificamos el tipo del titulo de Serie a Documental'
+\echo '-------------------------------------------------------'
 UPDATE titulo SET tipo='Documental' WHERE nombre='Historia de dos ciudades' and tipo='Serie';
 \echo
 \o /dev/null
@@ -412,16 +429,16 @@ START TRANSACTION;
 
 \echo 
 \echo '-----------------------------------------------------------------------------' 
-\echo ' -- TITULO_SERIE:Comprobar que el título que se desea asociar a una serie es del tipo serie'
-\echo '--'
+\echo ' -- TITULO_SERIE: Comprobar que el título que se desea asociar a una serie' 
+\echo '                  es del tipo serie'
 \echo '-----------------------------------------------------------------------------' 
 \echo 
 \echo 'INFO: El titulo Bad Boys for Life es del tipo Pelicula.'
 \echo 
 SELECT * FROM titulo WHERE nombre='Bad Boys for Life' and tipo='Pelicula';
 \echo
-\echo '--Introducimos la Pelicula en la tabla TITULO_SERIE'
-\echo '------------------------------------------------------------------'
+\echo '-- Introducimos la Pelicula en la tabla TITULO_SERIE'
+\echo '----------------------------------------------------'
 INSERT INTO titulo_serie (idtitulo, capitulo, temporada, idserie)
 VALUES (1, 1, 2, 2);
 \echo
@@ -455,3 +472,268 @@ ROLLBACK;
 \echo
 \echo
 
+
+
+
+\echo '**************************************************************'
+\echo '**   PRUEBAS DE FUNCIONAMIENTO DE LOS CHECKS                **'
+\echo '**************************************************************'
+\echo
+\echo
+--
+-- PERFIL: El número de descargas actuales no puede ser menor que cero
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '-----------------------------------------------------------------------------' 
+\echo ' PERFIL: El número de descargas actuales no puede ser menor que cero'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo
+\echo '-- Actualizamos el perfil 1 con un número de -1 descargas actuales:'
+\echo '   ----------------------------------------------------------------'
+\echo
+\echo 'INFO   Se debe producir un error.'
+\echo
+UPDATE perfil SET num_descargas_actuales = -1 WHERE idPerfil=1;
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+--
+-- REDSOCIAL: El tipo de red social debe ser alguno de los siguientes
+--            valores: Facebook, Twitter
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+
+\echo
+\echo '-----------------------------------------------------------------------------' 
+\echo ' REDSOCIAL:  El tipo de red social debe ser alguno de los siguientes'
+\echo '             valores: Facebook, Twitter'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo
+\echo '-- Actualizamos la redsocial del perfil 3 con tipo Twitter a tipo Facebook'
+\echo '   -----------------------------------------------------------------------'
+\echo
+\echo 'INFO   Lo debe hace correctamente'
+\echo
+UPDATE redsocial SET tipo_red_social = 'Facebook' WHERE idPerfil=3;
+\echo
+\echo 'RESULTADO: '
+\echo 
+SELECT * FROM redsocial WHERE idPerfil=3;
+\echo
+\echo
+\echo '-- Actualizamos la redsocial del perfil 3 con tipo Facebook a tipo Twitter'
+\echo '   -----------------------------------------------------------------------'
+\echo
+\echo 'INFO   Lo debe hace correctamente'
+\echo
+UPDATE redsocial SET tipo_red_social = 'Twitter' WHERE idPerfil=3;
+\echo
+\echo 'RESULTADO: '
+\echo 
+SELECT * FROM redsocial WHERE idPerfil=3;
+\echo
+\echo
+\echo '-- Actualizamos la redsocial del perfil 3 con tipo Twitter a tipo Tuenti'
+\echo '   ---------------------------------------------------------------------'
+\echo
+\echo 'INFO   Debe producir un error'
+\echo
+UPDATE redsocial SET tipo_red_social = 'Tuenti' WHERE idPerfil=3;
+\echo 
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+
+--
+-- SUSCRIPCION: El número de descargas máximas no puede ser menor que cero
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '-----------------------------------------------------------------------------' 
+\echo ' SUSCRIPCION: El número de descargas máximas no puede ser menor que cero'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo
+\echo '-- Actualizamos la suscripcion 1 con un número de -1 descargas máximas:'
+\echo '   --------------------------------------------------------------------'
+\echo
+\echo 'INFO   Se debe producir un error.'
+\echo
+UPDATE suscripcion SET num_descargas_max = -1 WHERE idSuscripcion=1;
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+
+
+--
+-- SUSCRIPCION: El tipo de suscripción debe ser alguno de los siguientes
+-- valores: Basica, Premium, Contenido
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+
+\echo
+\echo '------------------------------------------------------------------------------------' 
+\echo ' SUSCRIPCION:  SUSCRIPCION: El tipo de suscripción debe ser alguno de los siguientes'
+\echo '               valores: Basica, Premium, Contenido'
+\echo '------------------------------------------------------------------------------------' 
+\echo 
+\echo
+\echo '-- Actualizamos la suscipcion 1 de tipo Premium a tipo Basica'
+\echo '   ----------------------------------------------------------'
+\echo
+\echo 'INFO   Lo debe hace correctamente'
+\echo
+UPDATE suscripcion SET tipo_suscripcion = 'Basica' WHERE idSuscripcion=1;
+\echo
+\echo 'RESULTADO: '
+\echo 
+SELECT * FROM suscripcion WHERE idSuscripcion=1;
+\echo
+\echo
+\echo '-- Actualizamos la suscipcion 1 de tipo Basica a tipo Contenido'
+\echo '   ------------------------------------------------------------'
+\echo
+\echo 'INFO   Lo debe hace correctamente'
+\echo
+UPDATE suscripcion SET tipo_suscripcion = 'Contenido' WHERE idSuscripcion=1;
+\echo
+\echo 'RESULTADO: '
+\echo 
+SELECT * FROM suscripcion WHERE idSuscripcion=1;
+\echo
+\echo
+\echo '-- Actualizamos la suscipcion 1 de tipo Contenido a tipo Premium'
+\echo '   -------------------------------------------------------------'
+\echo
+\echo 'INFO   Lo debe hace correctamente'
+\echo
+UPDATE suscripcion SET tipo_suscripcion = 'Premium' WHERE idSuscripcion=1;
+\echo
+\echo 'RESULTADO: '
+\echo 
+SELECT * FROM suscripcion WHERE idSuscripcion=1;
+\echo
+\echo
+\echo '-- Actualizamos la redsocial del perfil 3 con tipo Twitter a tipo Ninguna'
+\echo '   ----------------------------------------------------------------------'
+\echo
+\echo 'INFO   Debe producir un error'
+\echo
+UPDATE suscripcion SET tipo_suscripcion = 'Ninguna' WHERE idSuscripcion=1;
+\echo 
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+
+
+--
+-- TITULO: Valoración debe estar entre los valores 0.0 y 10.0 ambos incluidos
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '-----------------------------------------------------------------------------' 
+\echo ' TITULO: Valoración debe estar entre los valores 0.0 y 10.0 ambos incluidos'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo
+\echo '-- Actualizamos el titulo 1 con un número de -0.1 de valoracion:'
+\echo '   -------------------------------------------------------------'
+\echo
+\echo 'INFO   Se debe producir un error.'
+\echo
+UPDATE titulo SET valoracion = -0.1 WHERE idTitulo=1;
+\echo
+
+\o /dev/null
+ROLLBACK;
+\o
+
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '-- Actualizamos el titulo 1 con un número de 10.1 de valoracion:'
+\echo '   -------------------------------------------------------------'
+\echo
+\echo 'INFO   Se debe producir un error.'
+\echo
+UPDATE titulo SET valoracion = 10.1 WHERE idTitulo=1;
+\echo
+
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo
+
+
+--
+-- TITULO: El número de descargas máximas no puede ser menor que cero
+--
+\o /dev/null
+START TRANSACTION;
+\o
+
+\echo
+\echo '-----------------------------------------------------------------------------' 
+\echo ' TITULO: La duración del título no puede ser menor que cero'
+\echo '-----------------------------------------------------------------------------' 
+\echo 
+\echo
+\echo '-- Actualizamos el titulo 1 con una duracion de -1 minutos:'
+\echo '   --------------------------------------------------------'
+\echo
+\echo 'INFO   Se debe producir un error.'
+\echo
+UPDATE titulo SET duracion = -1 WHERE idTitulo=1;
+\echo
+\o /dev/null
+ROLLBACK;
+\o
+
+\echo '============================================================================================' 
+\echo
+\echo

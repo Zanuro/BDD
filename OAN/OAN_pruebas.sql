@@ -711,7 +711,7 @@ ROLLBACK;
 
 
 --
--- TITULO: El número de descargas máximas no puede ser menor que cero
+-- TITULO: La duración del título no puede ser menor que cero.
 --
 \o /dev/null
 START TRANSACTION;

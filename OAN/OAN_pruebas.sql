@@ -646,7 +646,7 @@ UPDATE suscripcion SET tipo_suscripcion = 'Premium' WHERE idSuscripcion=1;
 SELECT * FROM suscripcion WHERE idSuscripcion=1;
 \echo
 \echo
-\echo '-- Actualizamos la redsocial del perfil 3 con tipo Twitter a tipo Ninguna'
+\echo '-- Actualizamos la suscripcion 1 a tipo Ninguna'
 \echo '   ----------------------------------------------------------------------'
 \echo
 \echo 'INFO   Debe producir un error'

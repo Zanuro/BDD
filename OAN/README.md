@@ -1,6 +1,6 @@
 # Proyecto OAN (Video-streaming)
 
-===
+
 
 ## Asignatura: Administracion y Diseño de Bases de Datos
 

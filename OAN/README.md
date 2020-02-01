@@ -23,7 +23,7 @@
 
 - [Modelo Logico-Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_logico_relacional.png)
 
-- [Modelo Logico Objeto-Relacional UML]()
+- [Modelo Logico Objeto-Relacional UML](https://github.com/Zanuro/BDD/blob/master/OAN/diagrama_clases.png)
 
 
 #### Generación de la base de datos:

@@ -1,0 +1,83 @@
+Integridad Referencial:
+----------------------
+
+
+
+USUARIO:
+	
+	UPDATE CASCADE   perfil, suscripcion, reporte
+	
+	DELETE CASCADE  perfil	
+	DELETE RESTRICT  suscripcion, reporte
+
+
+
+TITULO:
+
+	UPDATE/DELETE CASCADE   descargas, titulo_categoria, actor_titulo, perfil_comenta_titulo,
+				perfil_visualiza_titulo, pendientes, favoritos, titulo_serie,
+				subtitulo, titulo_idioma
+
+
+PERFIL
+	
+	UPDATE/DELETE CASCADE (idPerfil)   	descargas, redsocial, perfil_perfil, perfil_comenta_titulo,
+					   	perfil_visualiza_titulo
+
+
+	UPDATE/DELETE CASCADE (idFavoritos)  	favoritos
+
+
+	UPDATE/DELETE CASCADE (idPendientes)  	pendientes
+
+
+
+CATEGORIA:
+	
+	UPDATE/DELETE CASCADE  	titulo_categoria
+
+
+ACTOR:
+	
+	UPDATE/DELETE CASCADE  	titulo_actor
+
+
+SUSCRIPCION:
+
+	UPDATE CASCADE   factura
+		
+	DELETE RESTRICT  factura
+
+
+FACTURA:
+
+	UPDATE CASCADE   pago
+		
+	DELETE RESTRICT  pago
+
+
+REPORTE:
+	
+	UPDATE CASCADE   reporte_empleado
+		
+	DELETE RESTRICT  reporte_empleado
+
+
+EMPLEADO:
+
+	UPDATE CASCADE   reporte_empleado
+		
+	DELETE RESTRICT  reporte_empleado
+
+
+SERIE:
+
+	UPDATE CASCADE   titulo_serie
+		
+	DELETE RESTRICT  titulo_serie
+
+
+IDIOMA:
+
+	UPDATE/DELETE CASCADE  	titulo_idioma, subtitulo
+

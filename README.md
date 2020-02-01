@@ -109,4 +109,4 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 ##### Documentos de entregas realizadas: 
 
-[ELABORACIÓN DEL MODELO CONCEPTUAL DE DATOS (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/E_R.pdf)
+- [Elaboración del Modelo Conceptual de Datos (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/E_R.pdf)

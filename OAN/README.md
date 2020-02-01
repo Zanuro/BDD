@@ -51,4 +51,11 @@
 
 ##### Documentos de entregas realizadas: 
 
-- [Elaboración del Modelo Conceptual de Datos (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/E_R.pdf)
+- [Modelo Conceptual (ER/E)](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/E_R.pdf)
+- [Modelo Lógico Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/LogicoRelacional.pdf)
+- [Modelo Lógico Objeto-Relacional]()
+- [Generación de Código](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/ScriptCreacion.pdf)
+- [Carga de Datos]()
+
+
+

@@ -1,3 +1,5 @@
+\c oan ;
+
 -- -----------------------------------------------------
 -- Datos tabla categoria
 -- -----------------------------------------------------
@@ -40,6 +42,9 @@ VALUES ('La tierra es plana', 2018, 7.0, 109, 3.00, 'Explora la comunidad de cre
 INSERT INTO titulo (nombre, año, valoracion, duracion, precio, descripcion, calidad, tipo)
 VALUES ('Historia de dos ciudades', 2006, 9.0, 43, 0.50, 'Locke necesita respuestas a sus sueños y decide realizar un viaje espiritual a su subconsciente', '480', 'Serie');
 
+INSERT INTO titulo (nombre, año, valoracion, duracion, precio, descripcion, calidad, tipo)
+VALUES ('La bailarina de cristal', 2006, 9.0, 43, 0.50, 'El plan de Sayid de encontrar a Jack coloca a Jin y Sun en grave peligro', '480', 'Serie');
+
 COMMIT;
 
 
@@ -56,6 +61,9 @@ VALUES ('julia.almeida@gmail.com', 'Alcala', 4, 28014, 'Madrid', 'Madrid', 'Espa
 
 INSERT INTO usuario (email, calle, numero, codPostal, localidad, provincia, pais, fecha_nacimiento, nombre, apellidos)
 VALUES ('victoria.md@gmail.com', 'Rambla de Cataluña', 202, 08007, 'Barcelona', 'Barcelona', 'España', '2001-02-22', 'Victoria', 'Martin Delgado');
+
+INSERT INTO usuario (email, calle, numero, codPostal, localidad, provincia, pais, fecha_nacimiento, nombre, apellidos)
+VALUES ('marco@gmail.com', 'Rias Baixas', 2, 33333, 'Galicia', 'Galicia', 'España', '2001-02-22', 'Marco', 'Perez Perez');
 
 COMMIT;
 
@@ -114,6 +122,7 @@ INSERT INTO titulo_categoria (idCategoria, idTitulo) VALUES (1, 1);
 INSERT INTO titulo_categoria (idCategoria, idTitulo) VALUES (2, 1);
 INSERT INTO titulo_categoria (idCategoria, idTitulo) VALUES (5, 2);
 INSERT INTO titulo_categoria (idCategoria, idTitulo) VALUES (4, 3);
+INSERT INTO titulo_categoria (idCategoria, idTitulo) VALUES (4, 4);
 
 COMMIT;
 
@@ -128,6 +137,8 @@ INSERT INTO actor_titulo (idActor, idTitulo) VALUES (3, 2);
 INSERT INTO actor_titulo (idActor, idTitulo) VALUES (4, 2);
 INSERT INTO actor_titulo (idActor, idTitulo) VALUES (2, 3);
 INSERT INTO actor_titulo (idActor, idTitulo) VALUES (5, 3);
+INSERT INTO actor_titulo (idActor, idTitulo) VALUES (2, 4);
+INSERT INTO actor_titulo (idActor, idTitulo) VALUES (5, 4);
 
 COMMIT;
 
@@ -198,6 +209,12 @@ VALUES ('Error al reproducir el video', 'Cerrado', 'antonio.gutierrez1984@gmail.
 
 INSERT INTO reporte (descripcion, estado, email)
 VALUES ('A veces no se escucha el audio', 'Abierto', 'julia.almeida@gmail.com');
+
+INSERT INTO reporte (descripcion, estado, email)
+VALUES ('No me deja descargar', 'Abierto', 'julia.almeida@gmail.com');
+
+INSERT INTO reporte (descripcion, estado, email)
+VALUES ('¿Han solucionado mi problema con la suscripcion?', 'Abierto', 'marco@gmail.com');
 
 COMMIT;
 
@@ -332,6 +349,7 @@ INSERT INTO subtitulo (idTitulo, idIdioma) VALUES (1,2);
 INSERT INTO subtitulo (idTitulo, idIdioma) VALUES (2,1);
 INSERT INTO subtitulo (idTitulo, idIdioma) VALUES (2,2);
 INSERT INTO subtitulo (idTitulo, idIdioma) VALUES (3,1);
+INSERT INTO subtitulo (idTitulo, idIdioma) VALUES (4,1);
 
 COMMIT;
 
@@ -346,5 +364,6 @@ INSERT INTO titulo_idioma (idTitulo, idIdioma) VALUES (2,1);
 INSERT INTO titulo_idioma (idTitulo, idIdioma) VALUES (2,2);
 INSERT INTO titulo_idioma (idTitulo, idIdioma) VALUES (3,1);
 INSERT INTO titulo_idioma (idTitulo, idIdioma) VALUES (3,2);
+INSERT INTO titulo_idioma (idTitulo, idIdioma) VALUES (4,1);
 
 COMMIT;

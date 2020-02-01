@@ -72,9 +72,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 #### Información del proyecto:
 
-- [Proyecto Bases de Datos](https://github.com/Zanuro/BDD/blob/master/OAN/Proyecto%20de%20dise%C3%B1o%20de%20una.docx)
-
-- [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Seminario1_Proyecto.docx)
+- [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Definicion.pdf)
 
 
 #### Diagramas de los modelos de la base de datos:

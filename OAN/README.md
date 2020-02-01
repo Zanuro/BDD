@@ -48,4 +48,7 @@
 
 - [Resultado de las pruebas]()
 
+
+##### Documentos de entregas realizadas: 
+
 [ELABORACIÓN DEL MODELO CONCEPTUAL DE DATOS (ASI-6.1)-Modelo E/R Extendido](https://github.com/Zanuro/BDD/blob/master/E_R.pdf)

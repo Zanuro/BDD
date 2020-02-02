@@ -44,7 +44,7 @@
 
 - [Script SQL con pruebas del funcionamiento de asertos y disparadores](https://github.com/Zanuro/BDD/blob/master/OAN/Script/OAN_pruebas_triggers.sql)
 
-- [Resultado de las pruebas]()
+- [Resultado de las pruebas](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Pruebas%20OAN.pdf)
 
 
 ##### Documentos de entregas realizadas: 

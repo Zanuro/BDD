@@ -1,10 +1,8 @@
 # Proyecto OAN (Video-streaming)
 
-***
+#### Asignatura: Administracion y Diseño de Bases de Datos - [Universidad de La Laguna](https://www.ull.es)
 
-## Asignatura: Administracion y Diseño de Bases de Datos - [Universidad de La Laguna](https://www.ull.es)
-
-## Autores:
+### Autores:
 - Diego Machín Guardia
 - Ruymán Rodríguez Martín
 - Vlad Alexandru Comanescu
@@ -54,6 +52,3 @@
 - [Modelo Lógico Objeto-Relacional]()
 - [Generación de Código](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/ScriptCreacion.pdf)
 - [Carga de Datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/CargaDeDatos.pdf)
-
-
-

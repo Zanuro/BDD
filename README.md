@@ -58,11 +58,9 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 # Proyecto OAN (Video-streaming)
 
+#### Asignatura: Administracion y Diseño de Bases de Datos - [Universidad de La Laguna](https://www.ull.es)
 
-
-## Asignatura: Administracion y Diseño de Bases de Datos
-
-## Autores:
+### Autores:
 - Diego Machín Guardia
 - Ruymán Rodríguez Martín
 - Vlad Alexandru Comanescu
@@ -72,7 +70,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 #### Información del proyecto:
 
-- [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Definicion.pdf)
+- [Definicion de la base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Definicion.pdf)
 
 
 #### Diagramas de los modelos de la base de datos:
@@ -81,7 +79,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 - [Modelo Logico-Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_logico_relacional.png)
 
-- [Modelo Logico Objeto-Relacional UML]()
+- [Modelo Logico Objeto-Relacional UML](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_modelo_objeto_relacional.png)
 
 
 #### Generación de la base de datos:
@@ -102,7 +100,7 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 - [Script SQL con pruebas del funcionamiento de asertos y disparadores](https://github.com/Zanuro/BDD/blob/master/OAN/Script/OAN_pruebas_triggers.sql)
 
-- [Resultado de las pruebas]()
+- [Resultado de las pruebas](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Pruebas%20OAN.pdf)
 
 
 ##### Documentos de entregas realizadas: 
@@ -111,4 +109,4 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 - [Modelo Lógico Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/LogicoRelacional.pdf)
 - [Modelo Lógico Objeto-Relacional]()
 - [Generación de Código](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/ScriptCreacion.pdf)
-- [Carga de Datos]()
+- [Carga de Datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/CargaDeDatos.pdf)

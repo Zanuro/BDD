@@ -1,8 +1,8 @@
 # Proyecto OAN (Video-streaming)
 
+***
 
-
-## Asignatura: Administracion y Diseño de Bases de Datos
+## Asignatura: Administracion y Diseño de Bases de Datos - [Universidad de La Laguna](https://www.ull.es)
 
 ## Autores:
 - Diego Machín Guardia
@@ -14,7 +14,7 @@
 
 #### Información del proyecto:
 
-- [Definicion de la Base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Definicion.pdf)
+- [Definicion de la base de datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Definicion.pdf)
 
 
 #### Diagramas de los modelos de la base de datos:
@@ -23,7 +23,7 @@
 
 - [Modelo Logico-Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_logico_relacional.png)
 
-- [Modelo Logico Objeto-Relacional UML](https://github.com/Zanuro/BDD/blob/master/OAN/diagrama_clases.png)
+- [Modelo Logico Objeto-Relacional UML](https://github.com/Zanuro/BDD/blob/master/OAN/OAN_modelo_objeto_relacional.png)
 
 
 #### Generación de la base de datos:
@@ -53,7 +53,7 @@
 - [Modelo Lógico Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/LogicoRelacional.pdf)
 - [Modelo Lógico Objeto-Relacional]()
 - [Generación de Código](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/ScriptCreacion.pdf)
-- [Carga de Datos]()
+- [Carga de Datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/CargaDeDatos.pdf)
 
 
 

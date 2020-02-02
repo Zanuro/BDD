@@ -107,6 +107,6 @@ En este repositorio se subiran todas las practicas que se realizaran a lo largo 
 
 - [Modelo Conceptual (ER/E)](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/E_R.pdf)
 - [Modelo Lógico Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/LogicoRelacional.pdf)
-- [Modelo Lógico Objeto-Relacional]()
+- [Modelo Lógico Objeto-Relacional](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/Objeto_relacional.pdf)
 - [Generación de Código](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/ScriptCreacion.pdf)
 - [Carga de Datos](https://github.com/Zanuro/BDD/blob/master/OAN/Otros%20documentos/CargaDeDatos.pdf)
